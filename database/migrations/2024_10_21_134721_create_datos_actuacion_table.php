@@ -25,7 +25,7 @@ return new class extends Migration
             $table->text('relatoDelHecho');
             $table->timestamps();
         });
-    }
+    }    
 
     /**
      * Reverse the migrations.
