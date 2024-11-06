@@ -18,14 +18,15 @@ return new class extends Migration
             $table->date('fechaActuacion');
             $table->time('horaActuacion');
             $table->string('nSumario', 20);
-            $table->string('instruyeActuacion', 100);
-            $table->string('unidadFiscal', 100);
-            $table->string('fuerzaInterviniente', 100);
             $table->string('unidadRegional', 100);
+            $table->string('dependenciaPolicial', 100);
+            $table->string('fuerzaInterviniente', 100);
+            $table->string('fiscaliaRegional', 100);
+            $table->string('unidadFiscal', 100);
             $table->text('relatoDelHecho');
             $table->timestamps();
         });
-    }    
+    }
 
     /**
      * Reverse the migrations.

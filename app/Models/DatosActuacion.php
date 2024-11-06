@@ -19,10 +19,32 @@ class DatosActuacion extends Model
         'fechaActuacion',
         'horaActuacion',
         'nSumario',
-        'instruyeActuacion',
-        'unidadFiscal',
-        'fuerzaInterviniente',
         'unidadRegional',
+        'dependenciaPolicial',
+        'fuerzaInterviniente',
+        'fiscaliaRegional',
+        'unidadFiscal',
         'relatoDelHecho'
     ];
+
+    public function delitos()
+    {
+        return $this->hasMany(Delito::class);
+    }
+    public function personas()
+    {
+        return $this->hasMany(Persona::class);
+    }
+    public function vehiculos()
+    {
+        return $this->hasMany(Vehiculo::class);
+    }
+    public function armas()
+    {
+        return $this->hasMany(Arma::class);
+    }
+    public function elementos()
+    {
+        return $this->hasMany(Elemento::class);
+    }
 }
